@@ -1,0 +1,26 @@
+name: github.com/opspec-pkgs/opspec.dir.list-ops
+description: lists ops in a directory
+inputs:
+  dir:
+    dir:
+      description: directory to (recursively) list ops from
+      default: .
+outputs:
+  ops:
+    array:
+      description: lists name & path of ops in the directory
+      constraints:
+        items:
+          properties:
+            name: {}
+            path: {}
+version: 1.0.0
+run:
+  container:
+    image: { ref: 'opspecpkgs/opspec.dir.list-ops:1.0.0' }
+    cmd: [node, /cmd.js]
+    dirs:
+      /dir: $(dir)
+    files:
+      /cmd.js:
+      /ops: $(ops)
