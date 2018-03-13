@@ -2,7 +2,7 @@
 
 # Problem statement
 
-lists ops in a directory
+lists [opspec](https://opspec.io) ops in a directory
 
 # Format
 

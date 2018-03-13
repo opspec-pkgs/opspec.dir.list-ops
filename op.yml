@@ -1,5 +1,5 @@
 name: github.com/opspec-pkgs/opspec.dir.list-ops
-description: lists ops in a directory
+description: lists [opspec](https://opspec.io) ops in a directory
 inputs:
   dir:
     dir:
